@@ -1,4 +1,6 @@
 import { useEffect, useState } from "react";
+import MovieCard from "../components/MovieCard";
+import Spinner from "../components/Spinner";
 
 const Home = () => {
   const [moviesData, setMoviesData] = useState([]);
@@ -20,7 +22,21 @@ const Home = () => {
       });
   }, []);
   console.log(moviesData);
-  return <div></div>;
+
+  //   loading handle
+  if (loading) {
+    return <Spinner />;
+  }
+  return (
+    <div className="default-container px-5 mt-12 mb-20">
+      <div className="grid grid-cols-1 gap-8">
+        {moviesData.length > 0 &&
+          moviesData.map((movie, index) => (
+            <MovieCard key={index} movie={movie}></MovieCard>
+          ))}
+      </div>
+    </div>
+  );
 };
 
 export default Home;
