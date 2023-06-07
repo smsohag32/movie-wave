@@ -54,12 +54,7 @@ const Booking = () => {
           </div>
         </div>
       </div>
-      <Modal
-        modalHandler={{}}
-        isOpen={isOpen}
-        movie={movie}
-        closeModal={closeModal}
-      />
+      <Modal isOpen={isOpen} movie={movie} closeModal={closeModal} />
     </div>
   );
 };

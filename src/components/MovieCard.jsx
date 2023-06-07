@@ -10,7 +10,6 @@ const MovieCard = ({ movie }) => {
       <div className="card-body">
         <h2 className="card-title">{name}</h2>
 
-        <p>Click the button to listen on Spotiwhy app.</p>
         <div className="card-actions justify-end">
           <Link to={`/booking/${id}`}>
             <button className="btn btn-primary">Get Book Now</button>

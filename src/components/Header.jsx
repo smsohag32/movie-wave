@@ -15,14 +15,6 @@ const Header = () => {
         >
           Home
         </NavLink>
-        <NavLink
-          className={({ isActive }) =>
-            isActive ? "btn text-pink-500" : "btn btn-ghost"
-          }
-          to="/login"
-        >
-          Login
-        </NavLink>
       </div>
     </nav>
   );
