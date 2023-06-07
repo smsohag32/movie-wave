@@ -6,11 +6,21 @@ const Header = () => {
       <div className="flex-1">
         <Link to="/">MovieWave</Link>
       </div>
-      <div className="flex-none">
-        <NavLink to="/" className="btn btn-square btn-ghost">
+      <div className="flex-none gap-6">
+        <NavLink
+          className={({ isActive }) =>
+            isActive ? "btn text-pink-500" : "btn btn-ghost"
+          }
+          to="/"
+        >
           Home
         </NavLink>
-        <NavLink to="/login" className="btn btn-square btn-ghost">
+        <NavLink
+          className={({ isActive }) =>
+            isActive ? "btn text-pink-500" : "btn btn-ghost"
+          }
+          to="/login"
+        >
           Login
         </NavLink>
       </div>
